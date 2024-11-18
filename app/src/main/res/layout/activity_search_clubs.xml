@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SearchClubsActivity">
+
+    <!-- EditText for entering the league name -->
+
+    <!-- Button to retrieve clubs from API -->
+
+    <!-- Button to save retrieved clubs to local database -->
+
+    <!-- RecyclerView to display the list of clubs -->
+    <EditText
+        android:id="@+id/etLeagueName"
+        android:layout_width="381dp"
+        android:layout_height="72dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="69dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="56dp"
+        android:hint="Enter League Name"
+        android:inputType="text"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnRetrieveClubs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnRetrieveClubs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:text="Retrieve Clubs"
+        app:layout_constraintBottom_toTopOf="@+id/btnSaveClubs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etLeagueName" />
+
+    <Button
+        android:id="@+id/btnSaveClubs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Save Clubs to Database"
+        app:layout_constraintBottom_toTopOf="@+id/rvClubs"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnRetrieveClubs" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvClubs"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSaveClubs" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
